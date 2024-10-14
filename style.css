@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+*{
+    list-style: none;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body{
+    background: #ffffff;
+}
+/*HOVER*/
+body.active .container .sidebar{
+    left: -225px;
+}
+
+body.active .container .section{
+    margin-left: 0;
+    width: 100%;
+}
+body.active .container .Cards{
+    margin: auto;
+}
+body.active .container .grid-container {
+    display: grid;
+    grid-template-columns:
+        repeat(auto-fit, minmax(370px, 1fr));
+    grid-gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+body.active .container .Table_wrapper{
+    text-align: right;
+    margin-left: 22px;
+}
+/*side bar*/
+.container .sidebar{
+    background: rgb(5, 68, 104);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 225px;
+    height: 100%;
+    padding: 20px 0;
+    transition: all 0.5s ease;
+}
+.sidebar {
+    
+    text-align: left;
+}
+.sidebar .Profile{
+    text-align: center;
+}
+.top_nav{
+    padding: 40px 0;
+    background: rgb(5, 68, 104);
+ 
+}
+.sidebar .Profile img{
+    margin: 20px;
+    position: flex;
+    
+}
+.sidebar h1{
+    color: #ffffff;
+    margin: 10px 0 5px;
+}
+.sidebar p{
+    font-size: medium;
+    font-family: 'Courier New', Courier, monospace;
+    color: #f5f6fa;
+    margin: 20px 0;
+}
+.sidebar ul li a{
+    font-size: small;
+    color: #f5f6fa;
+}
+.container .sidebar ul li a{
+    display: block;
+    padding: 13px 30px;
+    border-bottom: 1px solid #10558d;
+    color: rgb(241, 237, 237);
+    font-size: 16px;
+    position: relative;
+}
+
+.container .sidebar ul li a .icon{
+    color: #dee4ec;
+    width: 30px;
+    display: inline-block;
+}
+
+
+.container .sidebar ul li a:hover,
+.container .sidebar ul li a.active{
+    color: #0c7db1;
+
+    background:white;
+    border-right: 2px solid rgb(5, 68, 104);
+}
+
+.container .sidebar ul li a:hover .icon,
+.container .sidebar ul li a.active .icon{
+    color: #0c7db1;
+}
+
+.container .sidebar ul li a:hover:before,
+.container .sidebar ul li a.active:before{
+    display: block;
+}
+/*---Topnavbar---*/
+.top_nav .hamburger{
+    text-align: right;
+    justify-self: right;
+}
+.container .section{
+    width: calc(100% - 225px);
+    margin-left: 225px;
+    transition: all 0.5s ease;
+}
+
+.container .section .top_nav{
+    background:  rgb(5, 68, 104);
+    height: 80px;
+    display: flex;
+    align-items: center;
+    padding: 0 30px;
+}
+i.fas.fa-bars{
+    color: #f5f6fa;
+}
+.container .section .top_navbar .hamburger a{
+    font-size: 28px;
+    color: #f4fbff;
+}
+
+.container .section .top_navbar .hamburger a:hover{
+    color: #a2ecff;
+}
+
+/*Cards*/
+.Cards{
+    text-align: right;
+    margin-left: 200px;
+}
+.grid-container {
+    display: grid;
+    grid-template-columns:
+        repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.card {
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+.ppl{
+   
+    background-color: #0c7db1;
+}
+.quantity{
+    background-color: slategrey;
+}
+
+
+/*Table*/
+.Table_wrapper{
+    text-align: right;
+    margin-left: 232px;
+}
+.Content_table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 97%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+
+.Content_table thead  tr {
+    background-color: #10558d;
+    color: #ffffff;
+    text-align: left;
+}
+.Content_table th{
+    text-align: right;
+
+}
+.Content_table th,
+.Content_table td {
+    padding: 12px 15px;
+}
+
+.Content_table tbody tr.active-row {
+    font-weight: bold;
+    color: #009879;
+}
+
+/*Statistics*/
+.CHART{
+    margin-left: 250px;
+   }
+.CHART .chart_content{
+    display: grid;
+ grid-template-columns: 1fr 1fr;
+}
+
+.CHART .chart_content .piechart{
+    margin: 20px;
+    width: 100%;  height: 400px
+}
+
+.CHART .chart_content .column{
+    margin: 20px;
+    width: 100%;  height: 400px;
+    display:fit-content;
+}
+

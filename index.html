@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <!--FortAwesome-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <!---PIE CHART-->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+
+        var data = google.visualization.arrayToDataTable([
+          ['Task', 'Hours per Day'],
+          ['Work',     11],
+          ['Eat',      2],
+          ['Commute',  5],
+          ['Watch TV', 2],
+          ['Sleep',    7]
+        ]);
+
+        var options = {
+          title: 'My Daily Activities'
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+        chart.draw(data, options);
+
+
+        /*COLUMN JAVA SCRIPT*/
+        google.charts.load('current', {'packages':['bar']});
+        google.charts.setOnLoadCallback(drawChart);
+  
+        function drawChart() {
+          var data = google.visualization.arrayToDataTable([
+            ['Year', 'Sales', 'Expenses', 'Profit'],
+            ['2014', 1000, 400, 200],
+            ['2015', 1170, 460, 250],
+            ['2016', 660, 1120, 300],
+            ['2017', 1030, 540, 350]
+          ]);
+  
+          var options = {
+            chart: {
+              title: 'Company Performance',
+              subtitle: 'Sales, Expenses, and Profit: 2023-2024',
+            }
+          };
+  
+          var chart = new google.charts.Bar(document.getElementById('columnchart_material'));
+  
+          chart.draw(data, google.charts.Bar.convertOptions(options));
+        }
+      }
+
+
+
+    </script>
+     <script type="text/javascript">
+        
+      </script>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+</head>
+<body>
+
+<section class="navbar">
+    <div class="container">
+                    <section class="section">
+            <div class="top_nav">
+                <div class="hamburger">
+                    <a href="#">
+                        <i class="fas fa-bars"></i>
+                        </a>      
+                </div>
+                </div>
+            </section>
+        <div class="sidebar">
+            <div class="Profile">
+            <img src="https://via.placeholder.com/190x100" class="Profile" alt="Placeholder">
+                <h1>Admin</h1>
+                <p>Lorem ipsum dolor sit amet.</p>
+            </div>
+
+                <ul>
+                    <li>
+                        <a href="#" class="active">
+                            <span class="icon"><i class="fas fa-home"></i></span>
+                            <span class="item">Home</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="icon"><i class="fas fa-desktop"></i></span>
+                            <span class="item">My Dashboard</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="icon"><i class="fas fa-user-friends"></i></span>
+                            <span class="item">People</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="icon"><i class="fas fa-tachometer-alt"></i></span>
+                            <span class="item">Perfomance</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="icon"><i class="fas fa-database"></i></span>
+                            <span class="item">Development</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="icon"><i class="fas fa-chart-line"></i></span>
+                            <span class="item">Reports</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="icon"><i class="fas fa-user-shield"></i></span>
+                            <span class="item">Admin</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="icon"><i class="fas fa-cog"></i></span>
+                            <span class="item">Settings</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+<!---CARD--->
+            <section class="Cards">
+                <div class="container">
+    <div class="grid-container">
+        <div class="card ppl"><h2>Header</h2>CARD 1</div>
+        <div class="card item"><h2>Header</h2>CARD 2</div>
+        <div class="card quantity"><h2>Header</h2>CARD 3</div>
+    </div>
+            </div>
+            </section>
+
+<!---Table--->
+<section class="table">
+    <div class="container">
+            <div class="Table_wrapper">
+                <table class="Content_table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Phonenumber</th>
+                            <th>address</th>
+                            <th>Hous number</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Dom</td>
+                            <td>0987654312</td>
+                            <td>6000</td>
+                            <td>5150</td>
+                        </tr>
+                        <tr class="active-row">
+                            <td>Melissa</td>
+                            <td>0987654312</td>
+                            <td>5150</td>
+                            <td>5150</td>
+                        </tr>
+                        <!-- and so on... -->
+                    </tbody>
+                </table>
+                
+                
+            </div>
+    </div>
+</section>
+
+<section class="CHART">
+    <div class="container">
+        <div class="chart_content">
+    <div id="piechart" class="piechart"  ></div>
+    <div id="columnchart_material"  class="column" style="width: 90%;  height: 400px;"></div>
+</div>
+    
+</div>
+</section>
+
+
+
+
+
+
+
+
+<script>
+      var hamburger = document.querySelector(".hamburger");
+    hamburger.addEventListener("click", function(){
+        document.querySelector("body").classList.toggle("active");
+    })
+
+    </script>
+
+
+
+        </div>
+    </div>
+</section>
+
+
+    
+</body>
+</html>
